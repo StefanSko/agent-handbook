@@ -2,10 +2,13 @@
 
 Follow the shared handbook:
 
-- `.agents/handbook.md`
+- `@.agents/handbook.md`
 
 ## Project-Specific
 
 <!-- Add project-local references here -->
-<!-- - `.agents-local/skills/my-skill/SKILL.md` -->
-<!-- - `.agents-local/docs/workflow.md` -->
+<!-- - @docs/development-workflow.md -->
+<!-- - @.agents/docs/code-style.md -->
+<!-- - @.agents/docs/testing.md -->
+<!-- - @.agents-local/skills/my-skill/SKILL.md -->
+<!-- - @.agents-local/docs/workflow.md -->
