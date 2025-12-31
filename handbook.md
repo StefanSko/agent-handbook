@@ -64,9 +64,30 @@ Detailed guidance in `docs/`:
 
 ## Skills
 
-Shared skills in `skills/`:
+Shared skills in `.agents/skills/`:
 
-- `skills/rust-style-python/` - Type-safe Python patterns
+- `rust-style-python/` - Type-safe Python patterns
+
+## Project-Local Extensions
+
+Projects can add their own docs and skills alongside this handbook:
+
+```
+project/
+├── .agents/              # This handbook (submodule)
+├── .agents-local/        # Project-specific extensions
+│   ├── docs/             # Project-specific documentation
+│   └── skills/           # Project-specific skills
+├── CLAUDE.md             # References both .agents/ and .agents-local/
+└── AGENTS.md
+```
+
+Reference project-local content in your CLAUDE.md:
+```markdown
+- @.agents/handbook.md
+- @.agents-local/skills/my-skill/SKILL.md
+- @.agents-local/docs/workflow.md
+```
 
 ## Environment Notes
 
