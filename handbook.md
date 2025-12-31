@@ -78,14 +78,20 @@ project/
 ├── .agents-local/        # Project-specific extensions
 │   ├── docs/             # Project-specific documentation
 │   └── skills/           # Project-specific skills
-├── CLAUDE.md             # References both .agents/ and .agents-local/
+├── .claude/skills/       # Symlinks for Claude Code discovery
+│   ├── rust-style-python -> ../../.agents/skills/rust-style-python
+│   └── my-skill -> ../../.agents-local/skills/my-skill
+├── .codex/skills/        # Symlinks for Codex discovery
+│   └── (same structure)
+├── CLAUDE.md
 └── AGENTS.md
 ```
 
-Reference project-local content in your CLAUDE.md:
+**Why symlinks?** Claude Code looks for skills in `.claude/skills/` and Codex in `.codex/skills/`. Symlinks let both tools discover skills from shared and local locations.
+
+Reference content in your CLAUDE.md:
 ```markdown
 - @.agents/handbook.md
-- @.agents-local/skills/my-skill/SKILL.md
 - @.agents-local/docs/workflow.md
 ```
 
